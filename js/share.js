@@ -12,7 +12,7 @@
   function getStoryUrl(storySlug) {
     if (storySlug) {
       // Ensure we use the current origin and correct path
-      return `${window.location.origin}/stories/${storySlug}.html`;
+      return `${window.location.origin}/untold_stories/stories/${storySlug}.html`;
     }
     return window.location.href;
   }
