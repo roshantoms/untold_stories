@@ -1,0 +1,167 @@
+/* Story page specific styles */
+
+.story-header {
+  position: sticky;
+  top: 0;
+  background: rgba(10,8,21,0.95);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,107,157,0.3);
+  font-family: 'OldStandardTT';
+}
+.story-header-left a {
+  font-weight: normal;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.story-header-left a:hover {
+  color: var(--accent-pink);
+}
+.story-header-center {
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.share-story-btn {
+  background: none;
+  border: 1px solid var(--accent-blue);
+  padding: 6px 18px;
+  border-radius: 40px;
+  color: var(--accent-blue);
+  cursor: pointer;
+  font-family: 'OldStandardTT';
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+.share-story-btn:hover {
+  background: var(--gradient);
+  border-color: transparent;
+  color: white;
+}
+
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.1);
+  z-index: 101;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--gradient);
+  transition: width 0.1s;
+}
+
+.story-three-col {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* Sticky side columns – images remain fixed while scrolling */
+.story-side {
+  flex: 1;
+  max-width: 220px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  height: fit-content;
+}
+.story-side .side-image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.story-side .side-image.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-center {
+  flex: 2;
+  max-width: 700px;
+  width: 100%;
+}
+.story-content {
+  font-family: 'OldStandardTT';
+  font-size: 1.1rem;
+}
+.story-content h1 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.story-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.quote-block {
+  font-style: italic;
+  font-family: 'OldStandardTT';
+  font-size: 1.4rem;
+  border-left: 3px solid var(--accent-pink);
+  padding-left: 24px;
+  margin: 40px 0;
+  color: #e2d9ff;
+}
+.story-footer {
+  margin: 60px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,107,157,0.3);
+  padding-top: 40px;
+}
+.recommended-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.recommend-card {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 20px;
+  width: 160px;
+  text-align: center;
+  transition: 0.2s;
+}
+.recommend-card:hover {
+  background: var(--gradient);
+}
+.recommend-card a {
+  color: var(--text);
+}
+@media (max-width: 900px) {
+  .story-side {
+    display: none;
+  }
+  .story-center {
+    max-width: 100%;
+  }
+}

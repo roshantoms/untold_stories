@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Untold Stories | Love, longing & the words we never said</title>
+  <meta name="description" content="Untold Stories — a cinematic collection of unspoken feelings, heartbreak, and hope.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">UNTOLD STORIES</h1>
+      <p class="hero-subtitle">
+        Some stories were never spoken.<br>
+        Some feelings were never returned.<br>
+        Some people stayed in our hearts<br>
+        longer than they stayed in our lives.
+      </p>
+      <button class="hero-btn" id="exploreStoriesBtn">Explore Stories</button>
+    </div>
+  </section>
+
+  <!-- Story Collection Section -->
+  <section class="stories-collection" id="storiesSection">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="First Love">First Love</button>
+        <button class="filter-btn" data-filter="One-Sided Love">One-Sided Love</button>
+        <button class="filter-btn" data-filter="Heartbreak">Heartbreak</button>
+        <button class="filter-btn" data-filter="Missed Chances">Missed Chances</button>
+        <button class="filter-btn" data-filter="Moving On">Moving On</button>
+        <button class="filter-btn" data-filter="Goodbye">Goodbye</button>
+      </div>
+      <div class="stories-grid" id="storiesGrid">
+        
+        <!-- Story 1: The Last Message (custom image girl_lastmessage.png) -->
+        <a href="stories/the-last-message.html" class="story-card-link">
+          <div class="story-card" data-category="One-Sided Love">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/lastmessage.png" alt="The Last Message" loading="lazy">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">The Last Message</h3>
+              <p class="story-teaser">I typed it a hundred times and never pressed send.</p>
+              <div class="card-meta">
+                <span class="category">One-Sided Love</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="the-last-message">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 2: She Never Knew -->
+        <a href="stories/she-never-knew.html" class="story-card-link">
+          <div class="story-card" data-category="Missed Chances">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/sheneverknew.png" alt="She Never Knew" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23f5a0b9\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' text-anchor=\'middle\'%3E🌙%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">She Never Knew</h3>
+              <p class="story-teaser">The words lived only in my chest.</p>
+              <div class="card-meta">
+                <span class="category">Missed Chances</span>
+                <span class="reading-time">6 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="she-never-knew">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 3: Three Years Too Late -->
+        <a href="stories/three-years-too-late.html" class="story-card-link">
+          <div class="story-card" data-category="Heartbreak">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/threeyearstoolate.png" alt="Three Years Too Late" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23ff8cae\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' text-anchor=\'middle\'%3E⏳%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">Three Years Too Late</h3>
+              <p class="story-teaser">When the silence became the loudest answer.</p>
+              <div class="card-meta">
+                <span class="category">Heartbreak</span>
+                <span class="reading-time">7 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="three-years-too-late">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 4: Coffee Shop at 5pm -->
+        <a href="stories/coffee-shop-at-5pm.html" class="story-card-link">
+          <div class="story-card" data-category="Missed Chances">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/coffeeshopat5pm.png" alt="Coffee Shop at 5pm" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%237aa9ff\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E☕%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">Coffee Shop at 5pm</h3>
+              <p class="story-teaser">We sat across and never said a word.</p>
+              <div class="card-meta">
+                <span class="category">Missed Chances</span>
+                <span class="reading-time">4 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="coffee-shop-at-5pm">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 5: The Train Ride Home -->
+        <a href="stories/the-train-ride-home.html" class="story-card-link">
+          <div class="story-card" data-category="First Love">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/thetrainridehome.png" alt="The Train Ride Home" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%235c9eff\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E🚆%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">The Train Ride Home</h3>
+              <p class="story-teaser">First love and the station we never left.</p>
+              <div class="card-meta">
+                <span class="category">First Love</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="the-train-ride-home">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 6: Summer of 2018 -->
+        <a href="stories/summer-of-2018.html" class="story-card-link">
+          <div class="story-card" data-category="Moving On">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/summer-of-2018.png" alt="Summer of 2018" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23ffb3c6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E☀️%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">Summer of 2018</h3>
+              <p class="story-teaser">Some love ends like a wildfire — beautiful, but gone.</p>
+              <div class="card-meta">
+                <span class="category">Moving On</span>
+                <span class="reading-time">6 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="summer-of-2018">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 7: If I Had One More Day -->
+        <a href="stories/if-i-had-one-more-day.html" class="story-card-link">
+          <div class="story-card" data-category="Goodbye">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/if-i-had-one-more-day.png" alt="If I Had One More Day" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23ff85a1\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E⏳%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">If I Had One More Day</h3>
+              <p class="story-teaser">The goodbye that never came.</p>
+              <div class="card-meta">
+                <span class="category">Goodbye</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="if-i-had-one-more-day">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 8: The Boy Who Waited -->
+        <a href="stories/the-boy-who-waited.html" class="story-card-link">
+          <div class="story-card" data-category="One-Sided Love">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/the-boy-who-waited.png" alt="The Boy Who Waited" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%2387aaff\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E🧸%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">The Boy Who Waited</h3>
+              <p class="story-teaser">Four years, one hope, no reply.</p>
+              <div class="card-meta">
+                <span class="category">One-Sided Love</span>
+                <span class="reading-time">7 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="the-boy-who-waited">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 9: A Love That Stayed Silent -->
+        <a href="stories/a-love-that-stayed-silent.html" class="story-card-link">
+          <div class="story-card" data-category="Heartbreak">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/a-love-that-stayed-silent.png" alt="A Love That Stayed Silent" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23ffa5c0\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E🤍%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">A Love That Stayed Silent</h3>
+              <p class="story-teaser">The loudest love never speaks.</p>
+              <div class="card-meta">
+                <span class="category">Heartbreak</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="a-love-that-stayed-silent">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Story 10: Wedding Invitation -->
+        <a href="stories/wedding-invitation.html" class="story-card-link">
+          <div class="story-card" data-category="Moving On">
+            <div class="card-thumb">
+              <img src="assets/thumbnails/wedding-invitation.png" alt="Wedding Invitation" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%236699ff\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'white\' font-size=\'20\'%3E💌%3C/text%3E%3C/svg%3E'">
+              <div class="overlay"></div>
+            </div>
+            <div class="card-info">
+              <h3 class="story-title">Wedding Invitation</h3>
+              <p class="story-teaser">You invited me to your happiness without me.</p>
+              <div class="card-meta">
+                <span class="category">Moving On</span>
+                <span class="reading-time">4 min read</span>
+              </div>
+              <div class="card-actions">
+                <button class="share-btn" data-story="wedding-invitation">✈️ Share</button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="js/share.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
