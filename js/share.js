@@ -8,13 +8,18 @@
     setTimeout(() => toast.remove(), 2000);
   }
 
-  // Build full story URL from story slug
+  // Build the exact URL for a story
   function getStoryUrl(storySlug) {
-    if (storySlug) {
-      // Ensure we use the current origin and correct path
-      return `${window.location.origin}/untold_stories/stories/${storySlug}.html`;
+    // If we are already on a story page (URL contains '/stories/'), use current page URL
+    if (window.location.pathname.includes('/stories/')) {
+      return window.location.href;
     }
-    return window.location.href;
+    // Otherwise (index page), construct absolute URL to the story file
+    // Get the base path (e.g., / or /subfolder/)
+    let basePath = window.location.pathname.replace(/[^/]*$/, '');
+    // Ensure basePath ends with slash
+    if (!basePath.endsWith('/')) basePath += '/';
+    return `${window.location.origin}${basePath}stories/${storySlug}.html`;
   }
 
   // Copy text to clipboard
@@ -50,7 +55,7 @@
     if (existingMenu) existingMenu.remove();
 
     const url = getStoryUrl(storySlug);
-    const title = document.querySelector('.story-title')?.innerText || 'Untold Stories';
+    const title = document.querySelector('.story-title')?.innerText || document.querySelector('h1')?.innerText || 'Untold Stories';
 
     const menu = document.createElement('div');
     menu.className = 'custom-share-menu';
@@ -101,7 +106,6 @@
   // Attach to all share buttons (both on cards and story pages)
   function initShareButtons() {
     document.querySelectorAll('.share-btn, .share-story-btn').forEach(btn => {
-      // Remove existing listener to avoid duplicates (for dynamic content)
       btn.removeEventListener('click', shareHandler);
       btn.addEventListener('click', shareHandler);
     });
@@ -114,14 +118,13 @@
     showShareMenu(this, storySlug);
   }
 
-  // Re-run after DOM changes (for filters etc.)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initShareButtons);
   } else {
     initShareButtons();
   }
 
-  // Optional: watch for dynamically added cards (filters don't recreate buttons, but safe)
+  // Watch for dynamically added cards (safe)
   const observer = new MutationObserver(() => initShareButtons());
   observer.observe(document.body, { childList: true, subtree: true });
 })();
